@@ -27,13 +27,11 @@
 - (void)reload;
 // Flush data to disk
 - (BOOL)flush;
-// Retrieve item with given identifier
+// Operations on repository
+- (NSUInteger)itemCount;
 - (BBItem*)itemWithIdentifier:(NSString*)identifier;
-// Add a new item
 - (void)addItem:(BBItem*)item;
-// Remove item
 - (void)removeItem:(BBItem*)item;
-// Remove item by key
 - (void)removeItemWithIdentifier:(NSString*)identifier;
 
 @end

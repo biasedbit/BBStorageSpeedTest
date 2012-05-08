@@ -13,7 +13,7 @@
 
 #pragma mark - Constants
 
-NSUInteger const kBBBenchmarkViewControllerItemCount = 10000;
+NSUInteger const kBBBenchmarkViewControllerItemCount = 1000;
 
 
 
@@ -96,6 +96,9 @@ NSUInteger const kBBBenchmarkViewControllerItemCount = 10000;
     BBItemRepository* dictionaryRepository = [BBDictionaryItemRepository sharedRepository];
     BBItemRepository* coderRepository = [BBCoderItemRepository sharedRepository];
 
+    [self testRepositoryCorrectness:dictionaryRepository];
+    [self testRepositoryCorrectness:coderRepository];
+
     NSMutableArray* dummyData = [NSMutableArray arrayWithCapacity:kBBBenchmarkViewControllerItemCount];
     for (NSUInteger i = 0; i < kBBBenchmarkViewControllerItemCount; i++) {
         BBItem* dummyItem = [[BBItem alloc] init];
@@ -112,17 +115,80 @@ NSUInteger const kBBBenchmarkViewControllerItemCount = 10000;
         [dummyData addObject:dummyItem];
     }
 
-    [self appendText:@"Testing property list of NSDictionary serialization...\n"];
+    [self appendText:@"Testing NSDictionary & Binary Plist serialization...\n"];
     [self appendText:[self testSpeed:dictionaryRepository withDummyData:dummyData]];
-    [self appendText:@"Finished testing coredata cache..."];
+    [self appendText:@"Finished testing NSDictionary & Binary Plist..."];
 
     sleep(1);
 
     [self appendText:@"Testing NSKeyedArchiver & NSCoder serialization...\n"];
     [self appendText:[self testSpeed:coderRepository withDummyData:dummyData]];
-    [self appendText:@"Finished testing filesystem cache..."];
+    [self appendText:@"Finished testing NSKeyedArchiver & NSCoder serialization..."];
 
     [self appendText:@"Done!"];
+}
+
+- (void)testRepositoryCorrectness:(BBItemRepository*)repository
+{
+    [repository reset];
+    NSAssert([repository itemCount] == 0, @"Zero items after reset");
+
+    [repository reload];
+    NSAssert([repository itemCount] == 0, @"Zero items after reloading empty repository");
+
+    NSDate* date = [NSDate date];
+    
+    BBItem* item = [[BBItem alloc] init];
+    item.identifier = @"item zero";
+    item.createdAt = date;
+    item.hash = @"item zero hash";
+    item.data = [@"item zero data" dataUsingEncoding:NSUTF8StringEncoding];
+    item.views = 1;
+    item.displayInRect = CGRectMake(1, 1, 1, 1);
+    item.optionalString = @"optional!";
+
+    [repository addItem:item];
+    NSAssert([repository itemCount] == 1, @"One item in repository after adding one item");
+
+    [repository removeItem:item];
+    NSAssert([repository itemCount] == 0, @"Zero items after removing item");
+
+    [repository addItem:item];
+    NSAssert([repository itemCount] == 1, @"One item in repository after adding one item");
+
+    [repository removeItemWithIdentifier:item.identifier];
+    NSAssert([repository itemCount] == 0, @"Zero items after removing item by identifier");
+
+    [repository addItem:item];
+    NSAssert([repository itemCount] == 1, @"One item in repository after adding one item");
+
+    BBItem* retrievedItem = [repository itemWithIdentifier:@"item zero"];
+    NSAssert(retrievedItem != nil, @"Non-nil item when retrieving by key");
+    NSAssert(retrievedItem == item, @"Same item when retrieving by key");
+
+    NSAssert([repository flush], @"Flush repository to disk");
+
+    [repository reload];
+    NSAssert([repository itemCount] == 1, @"One item after reloading repository from disk");
+
+    retrievedItem = [repository itemWithIdentifier:@"item zero"];
+    NSAssert(retrievedItem != nil, @"Non-nil item when retrieving by key");
+    NSAssert(retrievedItem != item, @"Not the same item after reloading from disk");
+
+    NSAssert([retrievedItem.identifier isEqualToString:@"item zero"], @"Correct deserialization of 'identifier' field");
+    NSAssert([retrievedItem.createdAt isEqualToDate:date], @"Correct deserialization of 'date' field");
+    NSAssert([retrievedItem.hash isEqualToString:@"item zero hash"], @"Correct deserialization of 'hash' field");
+    NSData* retrievedData = retrievedItem.data;
+    NSString* stringFromRetrievedData = [[NSString alloc] initWithData:retrievedData encoding:NSUTF8StringEncoding];
+    NSAssert([stringFromRetrievedData isEqualToString:@"item zero data"], @"Correct deserialization of 'data' field");
+    NSAssert(retrievedItem.views == 1, @"Correct deserialization of 'views' field");
+    NSAssert(CGRectEqualToRect(retrievedItem.displayInRect, item.displayInRect),
+             @"Correct deserialization of 'displayInRect' field");
+
+    [repository reset];
+    NSAssert([repository itemCount] == 0, @"Zero items after final reset");
+
+    BBLogInfo(@"Repository of class %@ passed correctness tests.", NSStringFromClass([repository class]));
 }
 
 - (NSString*)testSpeed:(BBItemRepository*)repository withDummyData:(NSArray*)items

@@ -38,8 +38,19 @@
     return YES;
 }
 
+- (NSUInteger)itemCount
+{
+    NSAssert(_entries != nil, @"[%@] Please call -reload prior to calling this method",
+             NSStringFromClass([self class]));
+
+    return [_entries count];
+}
+
 - (BBItem*)itemWithIdentifier:(NSString*)identifier
 {
+    NSAssert(_entries != nil, @"[%@] Please call -reload prior to calling this method",
+             NSStringFromClass([self class]));
+
     BBItem* item = [_entries objectForKey:identifier];
 
     return item;
