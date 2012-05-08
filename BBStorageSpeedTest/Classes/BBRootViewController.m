@@ -5,6 +5,9 @@
 
 #import "BBRootViewController.h"
 
+#import "BBDictionaryItemRepository.h"
+#import "BBCoderItemRepository.h"
+
 
 
 #pragma mark -
@@ -85,6 +88,47 @@
 {
     [self appendText:@"This is a text"];
     [self appendText:@"This is some more text"];
+
+    BBItemRepository* dictionaryRepository = [BBDictionaryItemRepository sharedRepository];
+    BBItemRepository* coderRepository = [BBCoderItemRepository sharedRepository];
+
+    NSUInteger amount = 1000;
+    NSMutableArray* dummyData = [NSMutableArray arrayWithCapacity:amount];
+    for (NSUInteger i = 0; i < 1000; i++) {
+        BBItem* dummyItem = [[BBItem alloc] init];
+        dummyItem.identifier = [NSString stringWithFormat:@"item %u", i];
+        dummyItem.createdAt = [NSDate date];
+        dummyItem.hash = @"someHash120djas!hf0410AjsifhsFjsd";
+        dummyItem.data = [@"some dummy data" dataUsingEncoding:NSUTF8StringEncoding];
+        dummyItem.views = i;
+        dummyItem.displayInRect = CGRectMake(i, i, i, i);
+        if (i % 2 == 0) {
+            dummyItem.optionalString = @"optional string!";
+        }
+
+        [dummyData addObject:dummyItem];
+    }
+
+    [self testSpeed:dictionaryRepository withDummyData:dummyData];
+    [self testSpeed:coderRepository withDummyData:dummyData];
+}
+
+- (NSString*)testSpeed:(BBItemRepository*)repository withDummyData:(NSArray*)items
+{
+    // Make sure we have no content
+    [repository reset];
+
+    for (BBItem* item in items) {
+        [repository addItem:item];
+    }
+
+    NSAssert([repository flush], @"Flush repository contents");
+    [repository reload];
+
+    // Clean it up again
+    [repository reset];
+
+    return @"lulz";
 }
 
 @end

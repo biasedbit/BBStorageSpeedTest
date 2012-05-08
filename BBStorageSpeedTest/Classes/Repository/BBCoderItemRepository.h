@@ -9,6 +9,11 @@
 
 #pragma mark -
 
-@interface BBCoderItemRepository : NSObject <BBItemRepository>
+@interface BBCoderItemRepository : BBItemRepository
+
+
+#pragma mark Public static methods
+
++ (BBCoderItemRepository*)sharedRepository;
 
 @end
