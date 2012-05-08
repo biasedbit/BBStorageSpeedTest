@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		159099571558CB3300E00179 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159099561558CB3300E00179 /* UIKit.framework */; };
+		159099591558CB3300E00179 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159099581558CB3300E00179 /* Foundation.framework */; };
+		1590995B1558CB3300E00179 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1590995A1558CB3300E00179 /* CoreGraphics.framework */; };
+		159099611558CB3300E00179 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1590995F1558CB3300E00179 /* InfoPlist.strings */; };
+		159099631558CB3300E00179 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 159099621558CB3300E00179 /* main.m */; };
+		159099671558CB3300E00179 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 159099661558CB3300E00179 /* BBAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		159099521558CB3300E00179 /* BBStorageSpeedTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBStorageSpeedTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		159099561558CB3300E00179 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		159099581558CB3300E00179 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1590995A1558CB3300E00179 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1590995E1558CB3300E00179 /* BBStorageSpeedTest-Info.plist */ = {isa = PBXFileReference; path = "BBStorageSpeedTest-Info.plist"; sourceTree = "<group>"; };
+		159099601558CB3300E00179 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		159099621558CB3300E00179 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		159099641558CB3300E00179 /* BBStorageSpeedTest-Prefix.pch */ = {isa = PBXFileReference; path = "BBStorageSpeedTest-Prefix.pch"; sourceTree = "<group>"; };
+		159099651558CB3300E00179 /* BBAppDelegate.h */ = {isa = PBXFileReference; path = BBAppDelegate.h; sourceTree = "<group>"; };
+		159099661558CB3300E00179 /* BBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1590994F1558CB3300E00179 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				159099571558CB3300E00179 /* UIKit.framework in Frameworks */,
+				159099591558CB3300E00179 /* Foundation.framework in Frameworks */,
+				1590995B1558CB3300E00179 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		159099471558CB3300E00179 = {
+			isa = PBXGroup;
+			children = (
+				1590995C1558CB3300E00179 /* BBStorageSpeedTest */,
+				159099551558CB3300E00179 /* Frameworks */,
+				159099531558CB3300E00179 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		159099531558CB3300E00179 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				159099521558CB3300E00179 /* BBStorageSpeedTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		159099551558CB3300E00179 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				159099561558CB3300E00179 /* UIKit.framework */,
+				159099581558CB3300E00179 /* Foundation.framework */,
+				1590995A1558CB3300E00179 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1590995C1558CB3300E00179 /* BBStorageSpeedTest */ = {
+			isa = PBXGroup;
+			children = (
+				159099651558CB3300E00179 /* BBAppDelegate.h */,
+				159099661558CB3300E00179 /* BBAppDelegate.m */,
+				1590995D1558CB3300E00179 /* Supporting Files */,
+			);
+			path = BBStorageSpeedTest;
+			sourceTree = "<group>";
+		};
+		1590995D1558CB3300E00179 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1590995E1558CB3300E00179 /* BBStorageSpeedTest-Info.plist */,
+				1590995F1558CB3300E00179 /* InfoPlist.strings */,
+				159099621558CB3300E00179 /* main.m */,
+				159099641558CB3300E00179 /* BBStorageSpeedTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		159099511558CB3300E00179 /* BBStorageSpeedTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1590996A1558CB3300E00179 /* Build configuration list for PBXNativeTarget "BBStorageSpeedTest" */;
+			buildPhases = (
+				1590994E1558CB3300E00179 /* Sources */,
+				1590994F1558CB3300E00179 /* Frameworks */,
+				159099501558CB3300E00179 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBStorageSpeedTest;
+			productName = BBStorageSpeedTest;
+			productReference = 159099521558CB3300E00179 /* BBStorageSpeedTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		159099491558CB3300E00179 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BB;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1590994C1558CB3300E00179 /* Build configuration list for PBXProject "BBStorageSpeedTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 159099471558CB3300E00179;
+			productRefGroup = 159099531558CB3300E00179 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				159099511558CB3300E00179 /* BBStorageSpeedTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		159099501558CB3300E00179 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				159099611558CB3300E00179 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1590994E1558CB3300E00179 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				159099631558CB3300E00179 /* main.m in Sources */,
+				159099671558CB3300E00179 /* BBAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1590995F1558CB3300E00179 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				159099601558CB3300E00179 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		159099681558CB3300E00179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		159099691558CB3300E00179 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1590996B1558CB3300E00179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBStorageSpeedTest/BBStorageSpeedTest-Prefix.pch";
+				INFOPLIST_FILE = "BBStorageSpeedTest/BBStorageSpeedTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1590996C1558CB3300E00179 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBStorageSpeedTest/BBStorageSpeedTest-Prefix.pch";
+				INFOPLIST_FILE = "BBStorageSpeedTest/BBStorageSpeedTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1590994C1558CB3300E00179 /* Build configuration list for PBXProject "BBStorageSpeedTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				159099681558CB3300E00179 /* Debug */,
+				159099691558CB3300E00179 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1590996A1558CB3300E00179 /* Build configuration list for PBXNativeTarget "BBStorageSpeedTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1590996B1558CB3300E00179 /* Debug */,
+				1590996C1558CB3300E00179 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 159099491558CB3300E00179 /* Project object */;
+}
