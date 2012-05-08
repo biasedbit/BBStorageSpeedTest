@@ -5,7 +5,7 @@
 
 #import "BBAppDelegate.h"
 
-#import "BBRootViewController.h"
+#import "BBBenchmarkViewController.h"
 
 
 
@@ -27,7 +27,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    BBRootViewController* rootController = [[BBRootViewController alloc] init];
+    BBBenchmarkViewController* rootController = [[BBBenchmarkViewController alloc] init];
     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:rootController];
     _window.rootViewController = navController;
 

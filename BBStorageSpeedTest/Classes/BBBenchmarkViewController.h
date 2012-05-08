@@ -5,6 +5,6 @@
 
 #pragma mark -
 
-@interface BBRootViewController : UIViewController
+@interface BBBenchmarkViewController : UIViewController
 
 @end

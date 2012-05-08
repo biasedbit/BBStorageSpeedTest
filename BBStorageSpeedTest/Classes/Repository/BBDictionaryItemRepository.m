@@ -69,7 +69,7 @@
     // Load the file as NSData
     NSData* dictionaryData = [NSData dataWithContentsOfFile:_indexFilePath];
     if (dictionaryData == nil) {
-        BBLogTrace(@"[%@] Could not read cache index; creating an empty one.", NSStringFromClass([self class]));
+        BBLogTrace(@"[%@] Could not read index file; creating empty repository.", NSStringFromClass([self class]));
         return;
     }
 

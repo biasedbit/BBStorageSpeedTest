@@ -17,7 +17,7 @@
 		1590997A1558CCD600E00179 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 159099731558CCD600E00179 /* BBAppDelegate.m */; };
 		1590997C1558CCD600E00179 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 159099771558CCD600E00179 /* InfoPlist.strings */; };
 		1590997D1558CCD600E00179 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 159099791558CCD600E00179 /* main.m */; };
-		159099801558CD2800E00179 /* BBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1590997F1558CD2800E00179 /* BBRootViewController.m */; };
+		159099801558CD2800E00179 /* BBBenchmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1590997F1558CD2800E00179 /* BBBenchmarkViewController.m */; };
 		159099831558CF7C00E00179 /* BBProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 159099821558CF7B00E00179 /* BBProfiler.m */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		15119D031558DD28008D370D /* BBDictionaryItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBDictionaryItemRepository.m; sourceTree = "<group>"; };
 		15119D051558DD3C008D370D /* BBCoderItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCoderItemRepository.h; sourceTree = "<group>"; };
 		15119D061558DD3C008D370D /* BBCoderItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCoderItemRepository.m; sourceTree = "<group>"; };
-		154A578C1559A397008B2F19 /* BBItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BBItemRepository.h; sourceTree = "<group>"; };
+		154A578C1559A397008B2F19 /* BBItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBItemRepository.h; sourceTree = "<group>"; };
 		154A578D1559A397008B2F19 /* BBItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBItemRepository.m; sourceTree = "<group>"; };
 		159099521558CB3300E00179 /* BBStorageSpeedTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBStorageSpeedTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		159099561558CB3300E00179 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -40,8 +40,8 @@
 		159099761558CCD600E00179 /* BBStorageSpeedTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BBStorageSpeedTest-Prefix.pch"; sourceTree = "<group>"; };
 		159099781558CCD600E00179 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		159099791558CCD600E00179 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1590997E1558CD2800E00179 /* BBRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRootViewController.h; sourceTree = "<group>"; };
-		1590997F1558CD2800E00179 /* BBRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRootViewController.m; sourceTree = "<group>"; };
+		1590997E1558CD2800E00179 /* BBBenchmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BBBenchmarkViewController.h; sourceTree = "<group>"; };
+		1590997F1558CD2800E00179 /* BBBenchmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBenchmarkViewController.m; sourceTree = "<group>"; };
 		159099811558CF7B00E00179 /* BBProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBProfiler.h; sourceTree = "<group>"; };
 		159099821558CF7B00E00179 /* BBProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBProfiler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,8 +125,8 @@
 				15119CF71558D0D1008D370D /* Model */,
 				159099721558CCD600E00179 /* BBAppDelegate.h */,
 				159099731558CCD600E00179 /* BBAppDelegate.m */,
-				1590997E1558CD2800E00179 /* BBRootViewController.h */,
-				1590997F1558CD2800E00179 /* BBRootViewController.m */,
+				1590997E1558CD2800E00179 /* BBBenchmarkViewController.h */,
+				1590997F1558CD2800E00179 /* BBBenchmarkViewController.m */,
 				159099811558CF7B00E00179 /* BBProfiler.h */,
 				159099821558CF7B00E00179 /* BBProfiler.m */,
 			);
@@ -208,7 +208,7 @@
 			files = (
 				1590997A1558CCD600E00179 /* BBAppDelegate.m in Sources */,
 				1590997D1558CCD600E00179 /* main.m in Sources */,
-				159099801558CD2800E00179 /* BBRootViewController.m in Sources */,
+				159099801558CD2800E00179 /* BBBenchmarkViewController.m in Sources */,
 				159099831558CF7C00E00179 /* BBProfiler.m in Sources */,
 				15119CFB1558D0E3008D370D /* BBItem.m in Sources */,
 				15119D041558DD28008D370D /* BBDictionaryItemRepository.m in Sources */,

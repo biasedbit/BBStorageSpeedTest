@@ -11,7 +11,7 @@
 
 @implementation BBCoderItemRepository
 {
-    __strong NSString* _indexFilePath;
+    __strong NSString* _archiveFilePath;
 }
 
 
@@ -25,8 +25,12 @@
                           objectAtIndex:0];
         NSString* appBundleID = [[NSBundle mainBundle] bundleIdentifier];
         path = [path stringByAppendingPathComponent:appBundleID];
-        
-        _indexFilePath = [path stringByAppendingPathComponent:@"BBCoderItemRepository.archive"];
+
+        // Make sure the directory exists
+        [[NSFileManager defaultManager]
+         createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+
+        _archiveFilePath = [path stringByAppendingPathComponent:@"BBCoderItemRepository.archive"];
 //        BBLogTrace(@"%@", _indexFilePath);
     }
 
@@ -50,9 +54,26 @@
 
 #pragma mark BBItemRepository
 
+- (void)reset
+{
+    [super reset];
+    
+    // This will fail if no file exists so ignore
+    [[NSFileManager defaultManager] removeItemAtPath:_archiveFilePath error:nil];
+}
+
 - (void)reload
 {
     [super reload];
+
+    NSMutableDictionary* entries = [NSKeyedUnarchiver unarchiveObjectWithFile:_archiveFilePath];
+    if (entries == nil) {
+        BBLogTrace(@"[%@] Could not read archive; creating empty repository.", NSStringFromClass([self class]));
+        return;
+    }
+
+    // Entries are not null, so assign to the ivar
+    _entries = entries;
 }
 
 - (BOOL)flush
@@ -61,7 +82,7 @@
         return NO;
     }
 
-    return YES;
+    return [NSKeyedArchiver archiveRootObject:_entries toFile:_archiveFilePath];
 }
 
 @end

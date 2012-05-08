@@ -3,16 +3,23 @@
 //  Copyright (c) 2012 BiasedBit. All rights reserved.
 //
 
-#import "BBRootViewController.h"
+#import "BBBenchmarkViewController.h"
 
 #import "BBDictionaryItemRepository.h"
 #import "BBCoderItemRepository.h"
+#import "BBProfiler.h"
+
+
+
+#pragma mark - Constants
+
+NSUInteger const kBBBenchmarkViewControllerItemCount = 10000;
 
 
 
 #pragma mark -
 
-@interface BBRootViewController ()
+@interface BBBenchmarkViewController ()
 
 @end
 
@@ -20,7 +27,7 @@
 
 #pragma mark -
 
-@implementation BBRootViewController
+@implementation BBBenchmarkViewController
 {
     UITextView* _textView;
 }
@@ -86,15 +93,11 @@
 
 - (void)runTests
 {
-    [self appendText:@"This is a text"];
-    [self appendText:@"This is some more text"];
-
     BBItemRepository* dictionaryRepository = [BBDictionaryItemRepository sharedRepository];
     BBItemRepository* coderRepository = [BBCoderItemRepository sharedRepository];
 
-    NSUInteger amount = 1000;
-    NSMutableArray* dummyData = [NSMutableArray arrayWithCapacity:amount];
-    for (NSUInteger i = 0; i < 1000; i++) {
+    NSMutableArray* dummyData = [NSMutableArray arrayWithCapacity:kBBBenchmarkViewControllerItemCount];
+    for (NSUInteger i = 0; i < kBBBenchmarkViewControllerItemCount; i++) {
         BBItem* dummyItem = [[BBItem alloc] init];
         dummyItem.identifier = [NSString stringWithFormat:@"item %u", i];
         dummyItem.createdAt = [NSDate date];
@@ -109,8 +112,17 @@
         [dummyData addObject:dummyItem];
     }
 
-    [self testSpeed:dictionaryRepository withDummyData:dummyData];
-    [self testSpeed:coderRepository withDummyData:dummyData];
+    [self appendText:@"Testing property list of NSDictionary serialization...\n"];
+    [self appendText:[self testSpeed:dictionaryRepository withDummyData:dummyData]];
+    [self appendText:@"Finished testing coredata cache..."];
+
+    sleep(1);
+
+    [self appendText:@"Testing NSKeyedArchiver & NSCoder serialization...\n"];
+    [self appendText:[self testSpeed:coderRepository withDummyData:dummyData]];
+    [self appendText:@"Finished testing filesystem cache..."];
+
+    [self appendText:@"Done!"];
 }
 
 - (NSString*)testSpeed:(BBItemRepository*)repository withDummyData:(NSArray*)items
@@ -122,13 +134,26 @@
         [repository addItem:item];
     }
 
-    NSAssert([repository flush], @"Flush repository contents");
-    [repository reload];
+    // Time executions of flush (write to disk) and reload (read from disk)
+    uint64_t flushNanoseconds = [BBProfiler profileBlock:^() {
+        NSAssert([repository flush], @"Flush repository contents");
+    }];
+
+    uint64_t reloadNanoseconds = [BBProfiler profileBlock:^() {
+        [repository reload];
+    }];
 
     // Clean it up again
     [repository reset];
 
-    return @"lulz";
+    return [NSString stringWithFormat:
+            @"Execution times:\n"
+            "Flush:\t\t%@\n"
+            "Reload:\t\t%@\n"
+            "Item count:\t%u\n",
+            [self humanReadableTime:flushNanoseconds],
+            [self humanReadableTime:reloadNanoseconds],
+            [items count]];
 }
 
 @end
