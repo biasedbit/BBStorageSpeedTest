@@ -7,25 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15119CFB1558D0E3008D370D /* BBItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15119CFA1558D0E3008D370D /* BBItem.m */; };
+		15119D041558DD28008D370D /* BBDictionaryItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 15119D031558DD28008D370D /* BBDictionaryItemRepository.m */; };
+		15119D071558DD3C008D370D /* BBCoderItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 15119D061558DD3C008D370D /* BBCoderItemRepository.m */; };
 		159099571558CB3300E00179 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159099561558CB3300E00179 /* UIKit.framework */; };
 		159099591558CB3300E00179 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159099581558CB3300E00179 /* Foundation.framework */; };
 		1590995B1558CB3300E00179 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1590995A1558CB3300E00179 /* CoreGraphics.framework */; };
-		159099611558CB3300E00179 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1590995F1558CB3300E00179 /* InfoPlist.strings */; };
-		159099631558CB3300E00179 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 159099621558CB3300E00179 /* main.m */; };
-		159099671558CB3300E00179 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 159099661558CB3300E00179 /* BBAppDelegate.m */; };
+		1590997A1558CCD600E00179 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 159099731558CCD600E00179 /* BBAppDelegate.m */; };
+		1590997C1558CCD600E00179 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 159099771558CCD600E00179 /* InfoPlist.strings */; };
+		1590997D1558CCD600E00179 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 159099791558CCD600E00179 /* main.m */; };
+		159099801558CD2800E00179 /* BBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1590997F1558CD2800E00179 /* BBRootViewController.m */; };
+		159099831558CF7C00E00179 /* BBProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 159099821558CF7B00E00179 /* BBProfiler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15119CF91558D0E3008D370D /* BBItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBItem.h; sourceTree = "<group>"; };
+		15119CFA1558D0E3008D370D /* BBItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBItem.m; sourceTree = "<group>"; };
+		15119D011558DC31008D370D /* BBItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBItemRepository.h; sourceTree = "<group>"; };
+		15119D021558DD28008D370D /* BBDictionaryItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBDictionaryItemRepository.h; sourceTree = "<group>"; };
+		15119D031558DD28008D370D /* BBDictionaryItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBDictionaryItemRepository.m; sourceTree = "<group>"; };
+		15119D051558DD3C008D370D /* BBCoderItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCoderItemRepository.h; sourceTree = "<group>"; };
+		15119D061558DD3C008D370D /* BBCoderItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCoderItemRepository.m; sourceTree = "<group>"; };
 		159099521558CB3300E00179 /* BBStorageSpeedTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBStorageSpeedTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		159099561558CB3300E00179 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		159099581558CB3300E00179 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1590995A1558CB3300E00179 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1590995E1558CB3300E00179 /* BBStorageSpeedTest-Info.plist */ = {isa = PBXFileReference; path = "BBStorageSpeedTest-Info.plist"; sourceTree = "<group>"; };
-		159099601558CB3300E00179 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		159099621558CB3300E00179 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		159099641558CB3300E00179 /* BBStorageSpeedTest-Prefix.pch */ = {isa = PBXFileReference; path = "BBStorageSpeedTest-Prefix.pch"; sourceTree = "<group>"; };
-		159099651558CB3300E00179 /* BBAppDelegate.h */ = {isa = PBXFileReference; path = BBAppDelegate.h; sourceTree = "<group>"; };
-		159099661558CB3300E00179 /* BBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAppDelegate.m; sourceTree = "<group>"; };
+		159099721558CCD600E00179 /* BBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBAppDelegate.h; sourceTree = "<group>"; };
+		159099731558CCD600E00179 /* BBAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBAppDelegate.m; sourceTree = "<group>"; };
+		159099751558CCD600E00179 /* BBStorageSpeedTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BBStorageSpeedTest-Info.plist"; sourceTree = "<group>"; };
+		159099761558CCD600E00179 /* BBStorageSpeedTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BBStorageSpeedTest-Prefix.pch"; sourceTree = "<group>"; };
+		159099781558CCD600E00179 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		159099791558CCD600E00179 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1590997E1558CD2800E00179 /* BBRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRootViewController.h; sourceTree = "<group>"; };
+		1590997F1558CD2800E00179 /* BBRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRootViewController.m; sourceTree = "<group>"; };
+		159099811558CF7B00E00179 /* BBProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBProfiler.h; sourceTree = "<group>"; };
+		159099821558CF7B00E00179 /* BBProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBProfiler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +58,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15119CF71558D0D1008D370D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15119CF91558D0E3008D370D /* BBItem.h */,
+				15119CFA1558D0E3008D370D /* BBItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15119D001558D9D8008D370D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				15119D011558DC31008D370D /* BBItemRepository.h */,
+				15119D021558DD28008D370D /* BBDictionaryItemRepository.h */,
+				15119D031558DD28008D370D /* BBDictionaryItemRepository.m */,
+				15119D051558DD3C008D370D /* BBCoderItemRepository.h */,
+				15119D061558DD3C008D370D /* BBCoderItemRepository.m */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		159099471558CB3300E00179 = {
 			isa = PBXGroup;
 			children = (
@@ -72,22 +109,36 @@
 		1590995C1558CB3300E00179 /* BBStorageSpeedTest */ = {
 			isa = PBXGroup;
 			children = (
-				159099651558CB3300E00179 /* BBAppDelegate.h */,
-				159099661558CB3300E00179 /* BBAppDelegate.m */,
-				1590995D1558CB3300E00179 /* Supporting Files */,
+				159099711558CCD600E00179 /* Classes */,
+				159099741558CCD600E00179 /* Other */,
 			);
 			path = BBStorageSpeedTest;
 			sourceTree = "<group>";
 		};
-		1590995D1558CB3300E00179 /* Supporting Files */ = {
+		159099711558CCD600E00179 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1590995E1558CB3300E00179 /* BBStorageSpeedTest-Info.plist */,
-				1590995F1558CB3300E00179 /* InfoPlist.strings */,
-				159099621558CB3300E00179 /* main.m */,
-				159099641558CB3300E00179 /* BBStorageSpeedTest-Prefix.pch */,
+				15119D001558D9D8008D370D /* Repository */,
+				15119CF71558D0D1008D370D /* Model */,
+				159099721558CCD600E00179 /* BBAppDelegate.h */,
+				159099731558CCD600E00179 /* BBAppDelegate.m */,
+				1590997E1558CD2800E00179 /* BBRootViewController.h */,
+				1590997F1558CD2800E00179 /* BBRootViewController.m */,
+				159099811558CF7B00E00179 /* BBProfiler.h */,
+				159099821558CF7B00E00179 /* BBProfiler.m */,
 			);
-			name = "Supporting Files";
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		159099741558CCD600E00179 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				159099751558CCD600E00179 /* BBStorageSpeedTest-Info.plist */,
+				159099761558CCD600E00179 /* BBStorageSpeedTest-Prefix.pch */,
+				159099771558CCD600E00179 /* InfoPlist.strings */,
+				159099791558CCD600E00179 /* main.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				159099611558CB3300E00179 /* InfoPlist.strings in Resources */,
+				1590997C1558CCD600E00179 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,18 +203,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				159099631558CB3300E00179 /* main.m in Sources */,
-				159099671558CB3300E00179 /* BBAppDelegate.m in Sources */,
+				1590997A1558CCD600E00179 /* BBAppDelegate.m in Sources */,
+				1590997D1558CCD600E00179 /* main.m in Sources */,
+				159099801558CD2800E00179 /* BBRootViewController.m in Sources */,
+				159099831558CF7C00E00179 /* BBProfiler.m in Sources */,
+				15119CFB1558D0E3008D370D /* BBItem.m in Sources */,
+				15119D041558DD28008D370D /* BBDictionaryItemRepository.m in Sources */,
+				15119D071558DD3C008D370D /* BBCoderItemRepository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1590995F1558CB3300E00179 /* InfoPlist.strings */ = {
+		159099771558CCD600E00179 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				159099601558CB3300E00179 /* en */,
+				159099781558CCD600E00179 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -220,8 +276,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BBStorageSpeedTest/BBStorageSpeedTest-Prefix.pch";
-				INFOPLIST_FILE = "BBStorageSpeedTest/BBStorageSpeedTest-Info.plist";
+				GCC_PREFIX_HEADER = "BBStorageSpeedTest/Other/BBStorageSpeedTest-Prefix.pch";
+				INFOPLIST_FILE = "BBStorageSpeedTest/Other/BBStorageSpeedTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -231,8 +287,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BBStorageSpeedTest/BBStorageSpeedTest-Prefix.pch";
-				INFOPLIST_FILE = "BBStorageSpeedTest/BBStorageSpeedTest-Info.plist";
+				GCC_PREFIX_HEADER = "BBStorageSpeedTest/Other/BBStorageSpeedTest-Prefix.pch";
+				INFOPLIST_FILE = "BBStorageSpeedTest/Other/BBStorageSpeedTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -257,6 +313,7 @@
 				1590996C1558CB3300E00179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

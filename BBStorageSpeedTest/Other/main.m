@@ -1,14 +1,13 @@
 //
-//  main.m
-//  BBStorageSpeedTest
+//  Created by Bruno de Carvalho -- @biasedbit / http://biasedbit.com
+//  Copyright (c) 2012 BiasedBit. All rights reserved.
 //
-//  Created by Bruno de Carvalho on 5/8/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
 
 #import "BBAppDelegate.h"
+
+
+
+#pragma mark -
 
 int main(int argc, char *argv[])
 {
