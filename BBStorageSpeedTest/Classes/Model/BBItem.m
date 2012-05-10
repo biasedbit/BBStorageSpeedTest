@@ -40,7 +40,7 @@ NSString* const kBBSampleModelFieldDisplayInRect = @"displayInRect";
 + (BBItem*)itemFromDictionary:(NSDictionary*)dictionary
 {
     BBItem* model = [[BBItem alloc] init];
-    // Object - straight forward conversions, retrieved from the dictionary without any futher changes required
+    // Object - straight forward conversions, retrieved from the dictionary without any further changes required
     model.identifier = [dictionary objectForKey:kBBSampleModelFieldIdentifier];
     model.createdAt = [dictionary objectForKey:kBBSampleModelFieldCreatedAt];
     model.hash = [dictionary objectForKey:kBBSampleModelFieldHash];
@@ -51,7 +51,7 @@ NSString* const kBBSampleModelFieldDisplayInRect = @"displayInRect";
         model.views = [viewsNumber unsignedIntegerValue];
     }
     NSString* displayInRectAsString = [dictionary objectForKey:kBBSampleModelFieldDisplayInRect];
-    if (displayInRectAsString) {
+    if (displayInRectAsString != nil) {
         model.displayInRect = CGRectFromString(displayInRectAsString);
     }
     // Optional

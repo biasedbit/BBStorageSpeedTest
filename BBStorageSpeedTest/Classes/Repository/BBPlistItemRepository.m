@@ -3,13 +3,13 @@
 //  Copyright (c) 2012 BiasedBit. All rights reserved.
 //
 
-#import "BBDictionaryItemRepository.h"
+#import "BBPlistItemRepository.h"
 
 
 
 #pragma mark -
 
-@implementation BBDictionaryItemRepository
+@implementation BBPlistItemRepository
 {
     __strong NSString* _indexFilePath;
 }
@@ -42,10 +42,10 @@
 
 + (id)sharedRepository
 {
-    static BBDictionaryItemRepository* instance = nil;
+    static BBPlistItemRepository* instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[BBDictionaryItemRepository alloc] init];
+        instance = [[BBPlistItemRepository alloc] init];
     });
 
     return instance;
@@ -79,6 +79,7 @@
                                        propertyListFromData:dictionaryData
                                        mutabilityOption:NSPropertyListImmutable
                                        format:NULL errorDescription:&error];
+
     if (error != nil) {
         BBLogTrace(@"[%@] Data read from index file but de-serialization failed: %@",
                    NSStringFromClass([self class]), error);

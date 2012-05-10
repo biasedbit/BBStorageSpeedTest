@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		15119CFB1558D0E3008D370D /* BBItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15119CFA1558D0E3008D370D /* BBItem.m */; };
-		15119D041558DD28008D370D /* BBDictionaryItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 15119D031558DD28008D370D /* BBDictionaryItemRepository.m */; };
-		15119D071558DD3C008D370D /* BBCoderItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 15119D061558DD3C008D370D /* BBCoderItemRepository.m */; };
+		15119D041558DD28008D370D /* BBPlistItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 15119D031558DD28008D370D /* BBPlistItemRepository.m */; };
+		15119D071558DD3C008D370D /* BBArchiveItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 15119D061558DD3C008D370D /* BBArchiveItemRepository.m */; };
 		154A578E1559A397008B2F19 /* BBItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 154A578D1559A397008B2F19 /* BBItemRepository.m */; };
 		159099571558CB3300E00179 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159099561558CB3300E00179 /* UIKit.framework */; };
 		159099591558CB3300E00179 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159099581558CB3300E00179 /* Foundation.framework */; };
@@ -24,10 +24,10 @@
 /* Begin PBXFileReference section */
 		15119CF91558D0E3008D370D /* BBItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBItem.h; sourceTree = "<group>"; };
 		15119CFA1558D0E3008D370D /* BBItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBItem.m; sourceTree = "<group>"; };
-		15119D021558DD28008D370D /* BBDictionaryItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBDictionaryItemRepository.h; sourceTree = "<group>"; };
-		15119D031558DD28008D370D /* BBDictionaryItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBDictionaryItemRepository.m; sourceTree = "<group>"; };
-		15119D051558DD3C008D370D /* BBCoderItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCoderItemRepository.h; sourceTree = "<group>"; };
-		15119D061558DD3C008D370D /* BBCoderItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCoderItemRepository.m; sourceTree = "<group>"; };
+		15119D021558DD28008D370D /* BBPlistItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BBPlistItemRepository.h; sourceTree = "<group>"; };
+		15119D031558DD28008D370D /* BBPlistItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPlistItemRepository.m; sourceTree = "<group>"; };
+		15119D051558DD3C008D370D /* BBArchiveItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BBArchiveItemRepository.h; sourceTree = "<group>"; };
+		15119D061558DD3C008D370D /* BBArchiveItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBArchiveItemRepository.m; sourceTree = "<group>"; };
 		154A578C1559A397008B2F19 /* BBItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBItemRepository.h; sourceTree = "<group>"; };
 		154A578D1559A397008B2F19 /* BBItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBItemRepository.m; sourceTree = "<group>"; };
 		159099521558CB3300E00179 /* BBStorageSpeedTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBStorageSpeedTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,10 +72,10 @@
 		15119D001558D9D8008D370D /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				15119D021558DD28008D370D /* BBDictionaryItemRepository.h */,
-				15119D031558DD28008D370D /* BBDictionaryItemRepository.m */,
-				15119D051558DD3C008D370D /* BBCoderItemRepository.h */,
-				15119D061558DD3C008D370D /* BBCoderItemRepository.m */,
+				15119D021558DD28008D370D /* BBPlistItemRepository.h */,
+				15119D031558DD28008D370D /* BBPlistItemRepository.m */,
+				15119D051558DD3C008D370D /* BBArchiveItemRepository.h */,
+				15119D061558DD3C008D370D /* BBArchiveItemRepository.m */,
 				154A578C1559A397008B2F19 /* BBItemRepository.h */,
 				154A578D1559A397008B2F19 /* BBItemRepository.m */,
 			);
@@ -211,8 +211,8 @@
 				159099801558CD2800E00179 /* BBBenchmarkViewController.m in Sources */,
 				159099831558CF7C00E00179 /* BBProfiler.m in Sources */,
 				15119CFB1558D0E3008D370D /* BBItem.m in Sources */,
-				15119D041558DD28008D370D /* BBDictionaryItemRepository.m in Sources */,
-				15119D071558DD3C008D370D /* BBCoderItemRepository.m in Sources */,
+				15119D041558DD28008D370D /* BBPlistItemRepository.m in Sources */,
+				15119D071558DD3C008D370D /* BBArchiveItemRepository.m in Sources */,
 				154A578E1559A397008B2F19 /* BBItemRepository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,11 +9,11 @@
 
 #pragma mark -
 
-@interface BBDictionaryItemRepository : BBItemRepository
+@interface BBArchiveItemRepository : BBItemRepository
 
 
 #pragma mark Public static methods
 
-+ (BBDictionaryItemRepository*)sharedRepository;
++ (BBArchiveItemRepository*)sharedRepository;
 
 @end

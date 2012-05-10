@@ -3,13 +3,13 @@
 //  Copyright (c) 2012 BiasedBit. All rights reserved.
 //
 
-#import "BBCoderItemRepository.h"
+#import "BBArchiveItemRepository.h"
 
 
 
 #pragma mark -
 
-@implementation BBCoderItemRepository
+@implementation BBArchiveItemRepository
 {
     __strong NSString* _archiveFilePath;
 }
@@ -40,12 +40,12 @@
 
 #pragma mark Public static methods
 
-+ (BBCoderItemRepository*)sharedRepository
++ (BBArchiveItemRepository*)sharedRepository
 {
-    static BBCoderItemRepository* instance = nil;
+    static BBArchiveItemRepository* instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[BBCoderItemRepository alloc] init];
+        instance = [[BBArchiveItemRepository alloc] init];
     });
 
     return instance;

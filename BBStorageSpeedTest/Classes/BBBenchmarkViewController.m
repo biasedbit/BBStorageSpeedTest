@@ -5,8 +5,8 @@
 
 #import "BBBenchmarkViewController.h"
 
-#import "BBDictionaryItemRepository.h"
-#import "BBCoderItemRepository.h"
+#import "BBPlistItemRepository.h"
+#import "BBArchiveItemRepository.h"
 #import "BBProfiler.h"
 
 
@@ -93,8 +93,8 @@ NSUInteger const kBBBenchmarkViewControllerItemCount = 1000;
 
 - (void)runTests
 {
-    BBItemRepository* dictionaryRepository = [BBDictionaryItemRepository sharedRepository];
-    BBItemRepository* coderRepository = [BBCoderItemRepository sharedRepository];
+    BBItemRepository* dictionaryRepository = [BBPlistItemRepository sharedRepository];
+    BBItemRepository* coderRepository = [BBArchiveItemRepository sharedRepository];
 
     [self testRepositoryCorrectness:dictionaryRepository];
     [self testRepositoryCorrectness:coderRepository];
